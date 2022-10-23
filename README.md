@@ -4,6 +4,44 @@
   </a>
 </p>
 
+```js
+function deletePost(id) {
+  return database.find({ id }).delete()
+}
+```
+
+> See also [remove](#remove).
+
+> **`remove` or `delete`?**
+>
+> When the difference between `remove` and `delete` is not so obvious to you, I'd suggest looking at their opposite actions - `add` and `create`.
+> The key difference between `add` and `create` is that `add` needs a destination while `create` **requires no destination**. You `add` an item _to somewhere_, but you don't "`create` it _to somewhere_".
+> Simply pair `remove` with `add` and `delete` with `create`.
+>
+> Explained in detail [here](https://github.com/kettanaito/naming-cheatsheet/issues/74#issue-1174942962).
+
+### `compose`
+
+Creates new data from the existing one.
+```js
+function deletePost(id) {
+  return database.find({ id }).delete()
+}
+```
+
+> See also [remove](#remove).
+
+> **`remove` or `delete`?**
+>
+> When the difference between `remove` and `delete` is not so obvious to you, I'd suggest looking at their opposite actions - `add` and `create`.
+> The key difference between `add` and `create` is that `add` needs a destination while `create` **requires no destination**. You `add` an item _to somewhere_, but you don't "`create` it _to somewhere_".
+> Simply pair `remove` with `add` and `delete` with `create`.
+>
+> Explained in detail [here](https://github.com/kettanaito/naming-cheatsheet/issues/74#issue-1174942962).
+
+### `compose`
+
+Creates new data from the existing one.
 # Naming cheatsheet
 
 ---
@@ -40,18 +78,6 @@ Pick **one** naming convention and follow it. It may be `camelCase`, `PascalCase
 
 ```js
 /* Bad */
-const a = 5 // "a" could mean anything
-const isPaginatable = a > 10 // "Paginatable" sounds extremely unnatural
-const shouldPaginatize = a > 10 // Made up verbs are so much fun!
-
-/* Good */
-const postCount = 5
-const hasPagination = postCount > 10
-const shouldPaginate = postCount > 10 // alternatively
-```
-
-## Avoid contractions
-
 Do **not** use contractions. They contribute to nothing but decreased readability of the code. Finding a short, descriptive name may be hard, but contraction is not an excuse for not doing so.
 
 ```js
@@ -123,27 +149,6 @@ function resetFruits() {
 resetFruits()
 console.log(fruits) // 5
 ```
-
-### `remove`
-
-Removes something _from_ somewhere.
-
-For example, if you have a collection of selected filters on a search page, removing one of them from the collection is `removeFilter`, **not** `deleteFilter` (and this is how you would naturally say it in English as well):
-
-```js
-function removeFilter(filterName, filters) {
-  return filters.filter((name) => name !== filterName)
-}
-
-const selectedFilters = ['price', 'availability', 'size']
-removeFilter('price', selectedFilters)
-```
-
-> See also [delete](#delete).
-
-### `delete`
-
-Completely erases something from the realms of existence.
 
 Imagine you are a content editor, and there is that notorious post you wish to get rid of. Once you clicked a shiny "Delete post" button, the CMS performed a `deletePost` action, **not** `removePost`.
 
