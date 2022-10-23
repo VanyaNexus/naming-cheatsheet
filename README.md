@@ -4,6 +4,44 @@
   </a>
 </p>
 
+```js
+function deletePost(id) {
+  return database.find({ id }).delete()
+}
+```
+
+> See also [remove](#remove).
+
+> **`remove` or `delete`?**
+>
+> When the difference between `remove` and `delete` is not so obvious to you, I'd suggest looking at their opposite actions - `add` and `create`.
+> The key difference between `add` and `create` is that `add` needs a destination while `create` **requires no destination**. You `add` an item _to somewhere_, but you don't "`create` it _to somewhere_".
+> Simply pair `remove` with `add` and `delete` with `create`.
+>
+> Explained in detail [here](https://github.com/kettanaito/naming-cheatsheet/issues/74#issue-1174942962).
+
+### `compose`
+
+Creates new data from the existing one.
+```js
+function deletePost(id) {
+  return database.find({ id }).delete()
+}
+```
+
+> See also [remove](#remove).
+
+> **`remove` or `delete`?**
+>
+> When the difference between `remove` and `delete` is not so obvious to you, I'd suggest looking at their opposite actions - `add` and `create`.
+> The key difference between `add` and `create` is that `add` needs a destination while `create` **requires no destination**. You `add` an item _to somewhere_, but you don't "`create` it _to somewhere_".
+> Simply pair `remove` with `add` and `delete` with `create`.
+>
+> Explained in detail [here](https://github.com/kettanaito/naming-cheatsheet/issues/74#issue-1174942962).
+
+### `compose`
+
+Creates new data from the existing one.
 # Naming cheatsheet
 
 - [English language](#english-language)
