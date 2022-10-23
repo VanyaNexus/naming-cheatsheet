@@ -62,57 +62,7 @@ const onItmClk = () => {}
 const onItemClick = () => {}
 ```
 
-## Avoid context duplication
-
-A name should not duplicate the context in which it is defined. Always remove the context from a name if that doesn't decrease its readability.
-
-```js
-class MenuItem {
-  /* Method name duplicates the context (which is "MenuItem") */
-  handleMenuItemClick = (event) => { ... }
-
-  /* Reads nicely as `MenuItem.handleClick()` */
-  handleClick = (event) => { ... }
-}
-```
-
-## Reflect the expected result
-
-A name should reflect the expected result.
-
-```jsx
-/* Bad */
-const isEnabled = itemCount > 3
-return <Button disabled={!isEnabled} />
-
-/* Good */
-const isDisabled = itemCount <= 3
-return <Button disabled={isDisabled} />
-```
-
----
-
-# Naming functions
-
-## A/HC/LC Pattern
-
-There is a useful pattern to follow when naming functions:
-
-```
-prefix? + action (A) + high context (HC) + low context? (LC)
-```
-
-Take a look at how this pattern may be applied in the table below.
-
-| Name                   | Prefix   | Action (A) | High context (HC) | Low context (LC) |
-| ---------------------- | -------- | ---------- | ----------------- | ---------------- |
-| `getUser`              |          | `get`      | `User`            |                  |
-| `getUserMessages`      |          | `get`      | `User`            | `Messages`       |
-| `handleClickOutside`   |          | `handle`   | `Click`           | `Outside`        |
-| `shouldDisplayMessage` | `should` | `Display`  | `Message`         |                  |
-
-> **Note:** The order of context affects the meaning of a variable. For example, `shouldUpdateComponent` means _you_ are about to update a component, while `shouldComponentUpdate` tells you that _component_ will update on itself, and you are but controlling when it should be updated.
-> In other words, **high context emphasizes the meaning of a variable**.
+## gh context emphasizes the meaning of a variable**.
 
 ---
 
