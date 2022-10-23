@@ -191,27 +191,6 @@ resetFruits()
 console.log(fruits) // 5
 ```
 
-### `remove`
-
-Removes something _from_ somewhere.
-
-For example, if you have a collection of selected filters on a search page, removing one of them from the collection is `removeFilter`, **not** `deleteFilter` (and this is how you would naturally say it in English as well):
-
-```js
-function removeFilter(filterName, filters) {
-  return filters.filter((name) => name !== filterName)
-}
-
-const selectedFilters = ['price', 'availability', 'size']
-removeFilter('price', selectedFilters)
-```
-
-> See also [delete](#delete).
-
-### `delete`
-
-Completely erases something from the realms of existence.
-
 Imagine you are a content editor, and there is that notorious post you wish to get rid of. Once you clicked a shiny "Delete post" button, the CMS performed a `deletePost` action, **not** `removePost`.
 
 ```js
