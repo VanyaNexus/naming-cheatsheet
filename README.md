@@ -1,23 +1,4 @@
 
----
-
-Naming things is hard. This sheet attempts to make it easier.
-
-Although these suggestions can be applied to any programming language, I will use JavaScript to illustrate them in practice.
-
-## English language
-
-Use English language when naming your variables and functions.
-
-```js
-/* Bad */
-const primerNombre = 'Gustavo'
-const amigos = ['Kate', 'John']
-
-/* Good */
-const firstName = 'Gustavo'
-const friends = ['Kate', 'John']
-```
 e](#english-language)
 - [Naming convention](#naming-convention)
 - [S-I-D](#s-i-d)
