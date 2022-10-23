@@ -41,25 +41,6 @@ A name must be _short_, _intuitive_ and _descriptive_:
 - **Descriptive**. A name must reflect what it does/possesses in the most efficient way.
 
 ```js
-/* Bad */
-Do **not** use contractions. They contribute to nothing but decreased readability of the code. Finding a short, descriptive name may be hard, but contraction is not an excuse for not doing so.
-
-```js
-/* Bad */
-const onItmClk = () => {}
-
-/* Good */
-const onItemClick = () => {}
-```
-
-## Avoid context duplication
-
-A name should not duplicate the context in which it is defined. Always remove the context from a name if that doesn't decrease its readability.
-
-```js
-class MenuItem {
-  /* Method name duplicates the context (which is "MenuItem") */
-  handleMenuItemClick = (event) => { ... }
 
   /* Reads nicely as `MenuItem.handleClick()` */
   handleClick = (event) => { ... }
