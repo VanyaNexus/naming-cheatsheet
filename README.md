@@ -32,23 +32,7 @@ const friends = ['Kate', 'John']
 
 Pick **one** naming convention and follow it. It may be `camelCase`, `PascalCase`, `snake_case`, or anything else, as long as it remains consistent. Many programming languages have their own traditions regarding naming conventions; check the documentation for your language or study some popular repositories on Github!
 
-```js
-/* Bad */
-const page_count = 5
-const shouldUpdate = true
-
-/* Good */
-const pageCount = 5
-const shouldUpdate = true
-
-/* Good as well */
-const page_count = 5
-const should_update = true
-```
-
-## S-I-D
-
-A name must be _short_, _intuitive_ and _descriptive_:
+```js_ and _descriptive_:
 
 - **Short**. A name must not take long to type and, therefore, remember;
 - **Intuitive**. A name must read naturally, as close to the common speech as possible;
